@@ -7,7 +7,7 @@
 */
 
 
-const targetNode = document.getElementById('chat');
+const targetNode = document.getElementById('cht_bx');
 const config = { attributes: true, childList: true, subtree: true };
 
 
@@ -1151,7 +1151,7 @@ const callback = function(mutationsList, observer) {
 	var lastMutation;
     for(let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-			var chatText = document.getElementById('chat').innerHTML;
+			var chatText = document.getElementById('cht_bx').innerHTML;
 			var activityText = removeChat(chatText);
 			var lines = seperateIntoLines(activityText);
 			var lastLine = lines[lines.length-2];
